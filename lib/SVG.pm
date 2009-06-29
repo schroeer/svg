@@ -62,17 +62,18 @@ SVG - Scalable Vector Graphics generation and handling
 use v6;
 use SVG;
 
-my $svg = :svg[
-    :width(200), :height(200),
-    circle => [
-        :cx(100), :cy(100), :r(50)
-    ],
-    text => [
-        :x(10), :y(20), "hello"
-    ]
-];
+my $tree =
+    svg => [
+        :width(200), :height(200),
+        circle => [
+            :cx(100), :cy(100), :r(50)
+        ],
+        text => [
+            :x(10), :y(20), "hello"
+        ],
+    ];
 
-say SVG.serialize($svg);
+say SVG.serialize($tree);
 =end code
 
 =head1 DESCRIPTION
