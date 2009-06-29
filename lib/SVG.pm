@@ -39,7 +39,7 @@ class SVG {
 
     sub visit(@list) {
         [~] @list.map: -> $node {
-            if $node ~~ Str {
+            if is_text_node($node) {
                 $node;
             }
             else {
